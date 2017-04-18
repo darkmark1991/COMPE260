@@ -1,0 +1,32 @@
+CompE260 : Linked Lists
+Amiran Ramishvili – 819817616
+Giga Vashakidze – 819818812
+
+List.h describes class LList with variable node pointer to the starting node. Node class,
+that has data element (type is defined as ListElement using typedef) and pointer to the
+next node. Node class has constructor that takes the value of data and next pointer as
+arguments. The next pointer by default is 0. LList class has following methods:
+ default constructor that creates empty list.
+ Explicit value constructor that creates list from a given node
+ copy constructor, that allows to deep copy a list to a new one.
+ The class also has a destructor, that takes care of all its nodes.
+ Overloading “=” operator allows to deep copy one list to existing one.
+ Empty() returns true if the list is empty and false otherwise.
+ Count() returns the number of elements.
+ Display() prints the data stored in nodes, one per line.
+ Insert() to insert value at a given position. If the position exceeds the number of
+elements in the list, the element is added at the end. The default position is -1,
+such values will also be added at the end of the list;
+ deleteNode() deletes node at the given position. The position is checked against
+the count of the list. If it exceeds the count a message is displayed and no node is
+deleted. If the node exists, it is deleted.
+ getNth() gets the data stored in Nth node. The position is checked against the
+count of the list. If it exceeds the count, or if the list is empty an error message is
+displayed. If the node exists, it's value is returned.
+ split() splits the list in two. If the number of elements is odd, the extra element
+goes in the front list. The back half is returned by the function. If the provided list
+is empty or has fewer than 2 elements, a message is displayed and an empty list is
+returned.
+ splitNth() splits the list in two at a given position. The back half is returned by the
+function. If the provided list is empty or has fewer than 2 elements, a message is
+displayed and an empty list is returned.
